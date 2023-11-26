@@ -7,6 +7,7 @@ import static org.assertj.core.api.Assertions.*;
 public class CalculatorTest {
     public static void main(String[] args) {
         System.out.println(Calculator.squareRootExtraction(169));
+        assertThatThrownBy(() -> Calculator.squareRootExtraction(-169)).isInstanceOf(IllegalArgumentException.class);
 
         assertThat(Calculator.calculatingDiscount(100,20)).isEqualTo(80);
         assertThat(Calculator.calculatingDiscount(5.0, 2.0)).isEqualTo(4.9);
