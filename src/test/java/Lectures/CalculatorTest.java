@@ -1,4 +1,8 @@
+package Lectures;
+
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import ru.gb.examples.Example_2.Lecture.Calculator;
 
 import java.io.ByteArrayInputStream;
@@ -7,9 +11,14 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
 
+    /**
+     * Лекция 2
+     */
     @Test
     void evaluatesExpression() {
         Calculator calculator = new Calculator();
@@ -17,7 +26,7 @@ public class CalculatorTest {
     }
 
     @Test
-    void substractionExpression() {
+    void subtractionExpression() {
         Calculator calculator = new Calculator();
         assertThat(calculator.calculation(2, 1, '-')).isEqualTo(1);
     }
@@ -39,6 +48,26 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertThatThrownBy(() -> calculator.calculation(8,4,'_'))
                 .isInstanceOf(IllegalStateException.class);
+    }
+
+    // <-------JUnit-Jupiter-Params
+    @ParameterizedTest
+    @ValueSource(chars = { '&', '#', '=' })
+    void expectedIllegalStateExpressionToo(char i) {
+        // Arrange
+        Calculator calculator = new Calculator();
+        char o = i;
+
+        // Act
+        IllegalStateException exception = assertThrows(IllegalStateException.class, () -> {
+            calculator.calculation(8, 4, o);
+        });
+
+        // Assert
+        String expectedMessage = "Unexpected value operator: " + o;
+        String actualMessage = exception.getMessage();
+
+        assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -63,7 +92,8 @@ public class CalculatorTest {
         System.setIn(in);
         System.setOut(new PrintStream(out));
 
-        assertThatThrownBy(() -> Calculator.getOperand()).isInstanceOf(IllegalStateException.class).
+        assertThatThrownBy(() -> Calculator.getOperand())
+                .isInstanceOf(IllegalStateException.class).
                 describedAs("Ошибка в вводимых данных");
 
         System.setIn(inputStream);

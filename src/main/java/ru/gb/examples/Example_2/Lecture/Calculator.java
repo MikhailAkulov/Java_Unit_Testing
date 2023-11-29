@@ -62,4 +62,61 @@ public class Calculator {
         }
         return result;
     }
+
+    // HW1.1: Придумайте и опишите (можно в псевдокоде) функцию извлечения корня и
+    // необходимые проверки для него используя граничные случаи
+    public static double squareRootExtraction(double number) {
+
+        //  0
+        //  Отрицательные числа
+        //  Дробные значения корней
+        //  Целые
+
+        double t;
+        double squareRoot = number / 2;
+        do {
+            t = squareRoot;
+            squareRoot = (t + (number / t)) / 2;
+        }
+        while ((t - squareRoot) != 0);
+        return squareRoot;
+
+        // или просто return Math.sqrt(number);
+    }
+
+    // Нужно написать в калькуляторе метод вычисления суммы покупки со скидкой и проверить его, используя AssertJ
+    // Примерная сигнатура и тело метода:
+    public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
+        // purchaseAmount - сумма покупки
+        // discountAmount - размер скидки
+
+        double discountedAmount = 0; // Сумма со скидкой (первоначальная сумма - скидка%)
+
+        if (purchaseAmount >= 0) {
+
+            if (discountAmount >= 0 && discountAmount <= 100) {
+                discountedAmount = purchaseAmount - (purchaseAmount * discountAmount) / 100;
+            } else {
+                throw new ArithmeticException("Скидка должна быть в диапазоне от 0 до 100%");
+            }
+
+        } else {
+            // Сумма покупки не может быть отрицательной
+            throw new ArithmeticException("Сумма покупки не может быть отрицательной");
+        }
+
+        return discountedAmount; // Метод должен возвращать сумму покупки со скидкой
+    }
+
+    //HW2.3L: Добавьте функцию возведения в степень в калькулятор и протестируйте
+    public static int pow(int value, int powValue) {
+        int result = 1;
+
+        for (int a = 1; a <= powValue; a++) {
+            if (a == 0) return 1;
+            result = result * value;
+
+        }
+        return result;
+    }
 }

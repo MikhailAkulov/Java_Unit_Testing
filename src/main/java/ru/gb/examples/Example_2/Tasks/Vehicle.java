@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_2.Seminar.hw;
+package ru.gb.examples.Example_2.Tasks;
 
 public abstract class Vehicle {
     private String company;

@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_2.Seminar.hw;
+package ru.gb.examples.Example_2.Tasks;
 
 public class Motorcycle extends Vehicle {
     private String company;
