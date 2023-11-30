@@ -1,4 +1,4 @@
-package main.java.ru.gb.examples.Example_3.Seminar.tdd;
+package main.java.ru.gb.examples.Example_3.Tasks.tdd;
 
 import org.junit.jupiter.api.Test;
 

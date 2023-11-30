@@ -50,5 +50,15 @@ public class SomeService {
      * 3.4. Метод принимает на вход 3 числа (int a, b, c). Нужно вернуть их сумму. Однако, если одно из значений равно 13,
      * то оно не учитывается в сумме. Так, например, если b равно 13, то считается сумма только a и c.
      */
-
+    public int luckySum(int a, int b, int c) {
+        if (a != 13 && b != 13 && c != 13) {
+            return a + b + c;
+        } else if (a == 13) {
+            return b + c;
+        } else if (b == 13) {
+            return a + c;
+        } else {
+            return a + b;
+        }
+    }
 }

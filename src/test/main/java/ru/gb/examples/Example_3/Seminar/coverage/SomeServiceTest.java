@@ -79,5 +79,23 @@ class SomeServiceTest {
                 .hasMessage("Скидка должна быть в диапазоне от 0 до 100%"); // процент скидки меньше 0
     }
 
+    @Test
+    void testNegativePurchaseAmount() {
+        assertThatThrownBy(() ->
+                someService.calculatingDiscount(-1000.0, 50))
+                .isInstanceOf(ArithmeticException.class)
+                .hasMessage("Сумма покупки не может быть отрицательной"); // сумма покупки меньше 0
+    }
+
     // 3.4.
+    @Test
+    void testPositiveLuckySum() {
+        assertThat(someService.luckySum(10, 11, 12)).isEqualTo(33);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"13, 10, 11, 21", "10, 13, 11, 21", "10, 11, 13, 21"})
+    void testNegativeLuckySum(int a, int b, int c, int result) {
+        assertThat(someService.luckySum(a, b, c)).isEqualTo(result);
+    }
 }
