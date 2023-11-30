@@ -3,9 +3,6 @@ package main.java.ru.gb.examples.Example_2.Lecture;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import main.java.ru.gb.examples.Example_2.Lecture.Calculator2;
-import main.java.ru.gb.examples.Example_3.Lecture.FigureCalc;
-import main.java.ru.gb.examples.Example_3.Lecture.Calculator3;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -15,7 +12,7 @@ import java.io.PrintStream;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CalculatorTest {
+public class Calculator2Test {
 
     /**
      * Лекция 2
@@ -102,31 +99,4 @@ public class CalculatorTest {
         System.setOut(null);
     }
 
-    /**
-     * Лекция 3
-     */
-    // создаем тест для метода вычисления радиуса круга по принципу TDD (сначала тест, потом метод)
-    @Test
-    void computeCircleRadiusWorksCorrectly() {
-        assertThat(Calculator3.computeAreaCircle(10)).isEqualTo(314.1592653589793);
-    }
-
-    //HW3.1L: Попробуйте реализовать в калькуляторе с помощью методологии TDD (с описанием шагов) функцию расчета длины окружности
-    // P=2πR
-    @Test
-    void computeLengthCircleWithRadius() {
-        Calculator3 calculator3 = new Calculator3();
-        assertThat(calculator3.computeLengthCircle(10)).isEqualTo(62.83185307179586);
-        assertTrue(Math.abs(62 - calculator3.computeLengthCircle(10)) < 1);
-    }
-
-    @Test
-    void computeLengthCircleWithDiameter() {
-        // Arrange
-        FigureCalc calculator = new FigureCalc();
-        // Act
-        double result = calculator.calculate(20);
-        // Assert
-        assertEquals(62.83185307179586, result);
-    }
 }

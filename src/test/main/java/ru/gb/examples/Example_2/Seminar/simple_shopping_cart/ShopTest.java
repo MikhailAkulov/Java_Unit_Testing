@@ -3,9 +3,6 @@ package main.java.ru.gb.examples.Example_2.Seminar.simple_shopping_cart;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import main.java.ru.gb.examples.Example_2.Seminar.simple_shopping_cart.Cart;
-import main.java.ru.gb.examples.Example_2.Seminar.simple_shopping_cart.Product;
-import main.java.ru.gb.examples.Example_2.Seminar.simple_shopping_cart.Shop;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -14,8 +11,6 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ShopTest {
 

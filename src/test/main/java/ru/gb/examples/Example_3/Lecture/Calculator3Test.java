@@ -1,6 +1,5 @@
 package main.java.ru.gb.examples.Example_3.Lecture;
 
-import main.java.ru.gb.examples.Example_2.Lecture.Calculator2;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -21,33 +20,33 @@ public class Calculator3Test {
      */
     @Test
     void evaluatesExpression() {
-        Calculator2 calculator2 = new Calculator2();
-        assertThat(calculator2.calculation(2, 6, '+')).isEqualTo(8);
+        Calculator3 calculator3 = new Calculator3();
+        assertThat(calculator3.calculation(2, 6, '+')).isEqualTo(8);
     }
 
     @Test
     void subtractionExpression() {
-        Calculator2 calculator2 = new Calculator2();
-        assertThat(calculator2.calculation(2, 1, '-')).isEqualTo(1);
+        Calculator3 calculator3 = new Calculator3();
+        assertThat(calculator3.calculation(2, 1, '-')).isEqualTo(1);
     }
 
     @Test
     void multiplicationExpression() {
-        Calculator2 calculator2 = new Calculator2();
-        assertThat(calculator2.calculation(2, 4, '*')).isEqualTo(8);
+        Calculator3 calculator3 = new Calculator3();
+        assertThat(calculator3.calculation(2, 4, '*')).isEqualTo(8);
     }
 
     @Test
 //    @Disabled
     void divisionExpression() {
-        Calculator2 calculator2 = new Calculator2();
-        assertThat(calculator2.calculation(8, 2, '/')).isEqualTo(4);
+        Calculator3 calculator3 = new Calculator3();
+        assertThat(calculator3.calculation(8, 2, '/')).isEqualTo(4);
     }
 
     @Test
     void expectedIllegalStateExceptionOnInvalidOperatorSymbol () {
-        Calculator2 calculator2 = new Calculator2();
-        assertThatThrownBy(() -> calculator2.calculation(8,4,'_'))
+        Calculator3 calculator3 = new Calculator3();
+        assertThatThrownBy(() -> calculator3.calculation(8,4,'_'))
                 .isInstanceOf(IllegalStateException.class);
     }
 
@@ -56,14 +55,12 @@ public class Calculator3Test {
     @ValueSource(chars = { '&', '#', '=' })
     void expectedIllegalStateExpressionToo(char i) {
         // Arrange
-        Calculator2 calculator2 = new Calculator2();
+        Calculator3 calculator3 = new Calculator3();
         char o = i;
-
         // Act
         IllegalStateException exception = assertThrows(IllegalStateException.class, () -> {
-            calculator2.calculation(8, 4, o);
+            calculator3.calculation(8, 4, o);
         });
-
         // Assert
         String expectedMessage = "Unexpected value operator: " + o;
         String actualMessage = exception.getMessage();
@@ -78,7 +75,7 @@ public class Calculator3Test {
         InputStream inputStream = System.in; // Сохраняем ссылку на ввод с клавиатуры
         System.setIn(in); // Подменяем ввод
 
-        Calculator2.getOperand(); // Вызываем метод
+        Calculator3.getOperand(); // Вызываем метод
 
         System.out.println(testedValue); // Для наглядности вывода
         System.setIn(inputStream); // Подменяем обратно
@@ -93,7 +90,7 @@ public class Calculator3Test {
         System.setIn(in);
         System.setOut(new PrintStream(out));
 
-        assertThatThrownBy(() -> Calculator2.getOperand())
+        assertThatThrownBy(() -> Calculator3.getOperand())
                 .isInstanceOf(IllegalStateException.class).
                 describedAs("Ошибка в вводимых данных");
 

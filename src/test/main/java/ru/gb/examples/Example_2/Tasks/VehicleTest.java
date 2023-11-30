@@ -2,9 +2,6 @@ package main.java.ru.gb.examples.Example_2.Tasks;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import main.java.ru.gb.examples.Example_2.Tasks.Car;
-import main.java.ru.gb.examples.Example_2.Tasks.Motorcycle;
-import main.java.ru.gb.examples.Example_2.Tasks.Vehicle;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
