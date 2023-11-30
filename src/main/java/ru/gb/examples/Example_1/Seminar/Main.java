@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_1.Seminar;
+package main.java.ru.gb.examples.Example_1.Seminar;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

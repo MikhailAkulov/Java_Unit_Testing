@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_1.Tasks.Calculator;
+package main.java.ru.gb.examples.Example_1.Tasks.Calculator;
 
 import static org.assertj.core.api.Assertions.*;
 

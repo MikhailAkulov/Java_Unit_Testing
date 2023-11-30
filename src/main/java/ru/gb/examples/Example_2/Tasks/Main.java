@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_2.Tasks;
+package main.java.ru.gb.examples.Example_2.Tasks;
 
 public class Main {
 

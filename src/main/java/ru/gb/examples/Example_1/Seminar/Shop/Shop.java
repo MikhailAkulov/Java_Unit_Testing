@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_1.Seminar.Shop;
+package main.java.ru.gb.examples.Example_1.Seminar.Shop;
 
 import java.util.Comparator;
 import java.util.List;

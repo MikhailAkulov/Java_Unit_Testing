@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_2.Seminar.simple_shopping_cart;
+package main.java.ru.gb.examples.Example_2.Seminar.simple_shopping_cart;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;

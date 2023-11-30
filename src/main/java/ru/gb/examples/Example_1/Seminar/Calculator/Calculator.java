@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_1.Seminar.Calculator;
+package main.java.ru.gb.examples.Example_1.Seminar.Calculator;
 
 public class Calculator {
     public static int calculation(int firstOperand, int secondOperand, char operator) {

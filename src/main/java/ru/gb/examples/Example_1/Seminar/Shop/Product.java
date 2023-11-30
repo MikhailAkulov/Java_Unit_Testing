@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_1.Seminar.Shop;
+package main.java.ru.gb.examples.Example_1.Seminar.Shop;
 
 public class Product {
     private Integer cost; // Стоимость продукта

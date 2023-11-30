@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_1.Lecture;
+package main.java.ru.gb.examples.Example_1.Lecture;
 
 import static org.assertj.core.api.Assertions.*;
 

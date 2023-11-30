@@ -1,6 +1,6 @@
-package ru.gb.examples.Example_1.Seminar.Calculator;
+package main.java.ru.gb.examples.Example_1.Seminar.Calculator;
 
-import ru.gb.examples.Example_1.Seminar.Calculator.Calculator;
+import main.java.ru.gb.examples.Example_1.Seminar.Calculator.Calculator;
 import static org.assertj.core.api.Assertions.*;
 
 public class CalculatorTest {
@@ -25,7 +25,7 @@ public class CalculatorTest {
         // Случаи с неправильными аргументами
         // аргумент operator типа char, должен вызывать исключение, если он получает не базовые символы (+-*/)
          try {
-             ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(8, 4, '_');
+             main.java.ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(8, 4, '_');
          } catch (IllegalStateException e) {
              if (!e.getMessage().equals("Unexpected value operator: _")) {
                  throw new AssertionError("Ошибка в методе");
@@ -57,20 +57,20 @@ public class CalculatorTest {
 //         HW1.1: Придумайте и опишите (можно в псевдокоде) функцию извлечения корня и
 //         необходимые проверки для него используя граничные случаи
 //         assertThatThrownBy(() ->
-//                 ru.gb.examples.Example_1.Seminar.Calculator.Calculator.squareRootExtraction(0, 1, -1)
+//                 main.java.ru.gb.examples.Example_1.Seminar.Calculator.Calculator.squareRootExtraction(0, 1, -1)
 //         ).isInstanceOf(SomeStateException.class);
 
 //         HW1.2: Как будет выглядеть проверка для случая деления на ноль? (с использованием AssertJ)
 //         assertThatThrownBy(() ->
-//                 ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(5, 0, '/')
+//                 main.java.ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(5, 0, '/')
 //         ).isInstanceOf(ArithmeticException.class);
 
 //         HW1.3: Сравните одну и ту же проверку с использованием условий, ассертов, AssertJ
 //         в каком случае стандартное сообщение об ошибке будет более информативным?
-//         if (0 != ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(2, 6, '+')) {
+//         if (0 != main.java.ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(2, 6, '+')) {
 //             throw new AssertionError("Ошибка в методе");
 //         }
-//           assert 0 == ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(2, 6, '+');
-//            assertThat(ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(2, 6, '+')).isEqualTo(0);
+//           assert 0 == main.java.ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(2, 6, '+');
+//            assertThat(main.java.ru.gb.examples.Example_1.Seminar.Calculator.Calculator.calculation(2, 6, '+')).isEqualTo(0);
     }
 }

@@ -1,4 +1,4 @@
-package ru.gb.examples.Example_2.Seminar.life_cycle_JUnit5;
+package main.java.ru.gb.examples.Example_2.Seminar.life_cycle_JUnit5;
 
 import org.junit.jupiter.api.*;
 
