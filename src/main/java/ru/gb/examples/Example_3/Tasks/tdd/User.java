@@ -14,12 +14,12 @@ import java.util.Objects;
  */
 public class User {
 
-    String name;
-    String password;
-    boolean isAdmin;
+    private String name;
+    private String password;
+    Boolean isAdmin;
     boolean isAuthenticate = false;
 
-    public User(String name, String password, boolean isAdmin) {
+    public User(String name, String password, Boolean isAdmin) {
         this.name = name;
         this.password = password;
         this.isAdmin = isAdmin;

@@ -23,7 +23,7 @@ public class UserRepository {
 
     public boolean findByName(String username) {
         for (User user : data) {
-            if (user.name.equals(username)) {
+            if (user.getName().equals(username)) {
                 return true;
             }
         }

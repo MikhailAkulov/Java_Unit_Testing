@@ -29,7 +29,7 @@ public class MoodAnalyserTest {
 
     @Test
     void testIndifferentMood() {
-        String check = moodAnalyser.analyseMood("да пошёл ты!");
+        String check = moodAnalyser.analyseMood("не спрашивай");
         assertThat(check).isEqualTo("So so");
     }
 }
