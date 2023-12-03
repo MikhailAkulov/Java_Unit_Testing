@@ -21,6 +21,16 @@ public class UserTest {
     }
 
     // 1.
+    @Test
+    void authenticateTest() {
+        userAdmin.isAuthenticate();
+//        assertThrows(IllegalArgumentException.class, () -> assertFalse(userAdmin.authenticate("Onotole", ""))
+//                ,"null or empty string during authentication");
+//        assertThatThrownBy(() -> userAdmin.authenticate("Onotole", ""))
+//                .isInstanceOf(IllegalArgumentException.class).hasMessage("null or empty string during authentication");
+        assertThatThrownBy(() -> userAdmin.authenticate("Onotole", ""))
+                .isInstanceOf(IllegalArgumentException.class).hasMessage("null or empty string during authentication");
+    }
 
 
     // 2.
