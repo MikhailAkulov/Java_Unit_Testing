@@ -22,18 +22,36 @@ public class UserTest {
 
     // 1.
     @Test
-    void authenticateTest() {
-        userAdmin.isAuthenticate();
-//        assertThrows(IllegalArgumentException.class, () -> assertFalse(userAdmin.authenticate("Onotole", ""))
-//                ,"null or empty string during authentication");
-//        assertThatThrownBy(() -> userAdmin.authenticate("Onotole", ""))
-//                .isInstanceOf(IllegalArgumentException.class).hasMessage("null or empty string during authentication");
+    void authenticateTestPositive() {
+        assertTrue(userAdmin.authenticate("Onotole", "12345"));
+    }
+
+    @Test
+    void authenticateTestNegative() {
         assertThatThrownBy(() -> userAdmin.authenticate("Onotole", ""))
                 .isInstanceOf(IllegalArgumentException.class).hasMessage("null or empty string during authentication");
     }
 
+    @Test
+    void authenticateTestReAuthorization() {
+        userAdmin.authenticate("Onotole", "12345");
+        userAdmin.authenticate("Onotole", "12345");
+        assertTrue(userAdmin.isAuthenticate());
+    }
 
+    @Test
+    void testIsAuthenticateWithRightData() {
+        userAdmin.authenticate("Onotole", "12345");
+        assertTrue(userAdmin.isAuthenticate());
+    }
+
+    @ParameterizedTest
+    @CsvSource({"Petya, 00000, false", "Vasya, 12345,false"})
+    void testIsAuthenticateWithWrongData(String name, String password, boolean result) {
+        assertThat(userSimple.authenticate(name, password)).isEqualTo(result);
+    }
     // 2.
+
     @Test
     void testGetNamePositive() {
         assertEquals("Vasya", userSimple.getName());
@@ -43,8 +61,8 @@ public class UserTest {
     void testGetNameNegative() {
         assertNotEquals("Vasya", userAdmin.getName());
     }
-
     // 3.
+
     @Test
     void testGetPasswordPositive() {
         assertEquals("qwerty", userSimple.getPassword());
@@ -54,8 +72,8 @@ public class UserTest {
     void testGetPasswordNegative() {
         assertNotEquals("qwerty", userAdmin.getPassword());
     }
-
     // 4.
+
     @Test
     void testUserIsAdminPositive() {
         assertTrue(userAdmin.isAdmin());
@@ -65,21 +83,7 @@ public class UserTest {
     void testUserIsAdminNegative() {
         assertFalse(userSimple.isAdmin());
     }
-
     // 5.
-    @Test
-    void testIsAuthenticateWithRightData() {
-        userAdmin.authenticate("Onotole", "12345");
-        assertTrue(userAdmin.isAuthenticate());
-    }
-
-    @ParameterizedTest
-    @CsvSource({"Petya, 00000, false", ",,false"})
-    void testIsAuthenticateWithWrongDataOrEmpty(String name, String password, boolean result) {
-        assertThat(userSimple.authenticate(name, password)).isEqualTo(result);
-    }
-
-    // 6.
     @Test
     void testLogOut() {
         userAdmin.authenticate(userAdmin.getName(), userAdmin.getPassword());
@@ -87,7 +91,7 @@ public class UserTest {
         assertFalse(userAdmin.isAuthenticate());
     }
 
-    // 7.
+    // 6.
     @Test
     void testEqualsPositive() {
         User userAdminTest = new User("Onotole", "12345", true);

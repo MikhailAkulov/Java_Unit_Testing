@@ -34,8 +34,10 @@ public class User {
                     return true;
                 }
             } else {
-                throw new IllegalArgumentException("null or empty string during authentication");
+                return true;
             }
+        } else {
+            throw new IllegalArgumentException("null or empty string during authentication");
         }
         return false;
     }
