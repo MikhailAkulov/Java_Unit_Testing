@@ -1,4 +1,4 @@
-package main.java.ru.gb.examples.Example_4.Seminar.book;
+package main.java.ru.gb.examples.Example_4.Tasks.book;
 
 import java.util.List;
 

@@ -1,19 +1,7 @@
 package main.java.ru.gb.examples.Example_4.Seminar;
 
-import main.java.ru.gb.examples.Example_4.Seminar.book.Book;
-import main.java.ru.gb.examples.Example_4.Seminar.book.BookRepository;
-import main.java.ru.gb.examples.Example_4.Seminar.book.BookService;
-import main.java.ru.gb.examples.Example_4.Seminar.book.InMemoryBookRepository;
-import main.java.ru.gb.examples.Example_4.Seminar.database.DataProcessor;
-import main.java.ru.gb.examples.Example_4.Seminar.database.Database;
-import main.java.ru.gb.examples.Example_4.Seminar.hotel.BookingService;
-import main.java.ru.gb.examples.Example_4.Seminar.hotel.HotelService;
-import main.java.ru.gb.examples.Example_4.Seminar.message.MessageService;
-import main.java.ru.gb.examples.Example_4.Seminar.message.NotificationService;
 import main.java.ru.gb.examples.Example_4.Seminar.weather.WeatherReporter;
 import main.java.ru.gb.examples.Example_4.Seminar.weather.WeatherService;
-
-import java.util.List;
 
 public class Main {
 
