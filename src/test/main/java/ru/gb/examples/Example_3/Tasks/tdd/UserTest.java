@@ -104,7 +104,7 @@ public class UserTest {
         assertNotEquals(userSimple, userAdminTest);
     }
 
-    // 8.
+    // 7.
     @Test
     void testHashCode() {
         assertEquals(Objects.hash("Vasya", "qwerty", false), userSimple.hashCode());
