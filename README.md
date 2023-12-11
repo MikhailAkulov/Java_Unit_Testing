@@ -7,3 +7,5 @@
 [Качество тестов](https://github.com/MikhailAkulov/Java_Unit_Testing/tree/main/src/main/java/ru/gb/examples/Example_3)
 
 [Зависимости в тестах](https://github.com/MikhailAkulov/Java_Unit_Testing/tree/main/src/main/java/ru/gb/examples/Example_4)
+
+[Другие виды тестирования](https://github.com/MikhailAkulov/Java_Unit_Testing/tree/main/src/main/java/ru/gb/examples/Example_5)
