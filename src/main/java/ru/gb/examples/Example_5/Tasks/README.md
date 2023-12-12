@@ -1,9 +1,6 @@
-# Other types of testing
+# Урок 5. Другие виды тестирования
 
-## Unit testing, Integration testing, End-to-end testing
-### Testcontainers, Selenium, Test automation, Continuous integration (CI)
-
-### Задание 1.
+## Задание 1.
 
 Представьте, что вы работаете над разработкой простого приложения для записной книжки, 
 которое позволяет пользователям добавлять, редактировать и удалять контакты.
@@ -15,7 +12,7 @@
 `Реализация:`
 [NotebookAppTest](https://github.com/MikhailAkulov/Java_Unit_Testing/blob/main/src/test/main/java/ru/gb/examples/Example_5/Tasks/NotebookAppTest.java)
 
-### Задание 2.
+## Задание 2.
 
 Ниже список тестовых сценариев. 
 Ваша задача - определить тип каждого теста (юнит-тест, интеграционный тест, сквозной тест) и объяснить, почему вы так решили. 

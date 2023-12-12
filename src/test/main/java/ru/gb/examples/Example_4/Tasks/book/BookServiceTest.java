@@ -10,6 +10,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
+/**
+ * Задание 2.
+ * У вас есть класс BookService, который использует интерфейс BookRepository для получения информации о книгах из базы данных.
+ * Ваша задача написать unit-тесты для BookService, используя Mockito для создания мок-объекта BookRepository.
+ */
+
 class BookServiceTest {
     BookRepository bookRepositoryMock;
     BookService bookService;
