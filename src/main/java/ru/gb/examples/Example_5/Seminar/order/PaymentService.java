@@ -1,0 +1,8 @@
+package main.java.ru.gb.examples.Example_5.Seminar.order;
+
+public class PaymentService {
+    public boolean processPayment(String orderId, double amount) {
+        // Здесь обычно был бы код для обработки платежей, но для примера просто возвращаем true
+        return true;
+    }
+}
