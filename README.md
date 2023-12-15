@@ -9,3 +9,5 @@
 [Зависимости в тестах](https://github.com/MikhailAkulov/Java_Unit_Testing/tree/main/src/main/java/ru/gb/examples/Example_4)
 
 [Другие виды тестирования](https://github.com/MikhailAkulov/Java_Unit_Testing/tree/main/src/main/java/ru/gb/examples/Example_5)
+
+[Юнит тестирование в других языках](https://github.com/MikhailAkulov/Java_Unit_Testing/tree/main/src/main/java/ru/gb/examples/Example_6)
