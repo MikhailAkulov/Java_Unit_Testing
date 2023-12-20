@@ -15,14 +15,15 @@ def test_calculate_average_empty_list():
     assert Application.calculate_list_average([]) == 0
 
 
-def test_calculate_average_raises_on_not_list():
+def test_calculate_average_raises_with_not_list():
     with raises(TypeError):
         Application.calculate_list_average("not list")
 
 
-def test_calculate_average_raises_on_not_numbers(self):
+def test_calculate_average_raises_with_not_numbers():
     with raises(TypeError):
         Application.calculate_list_average(["i", "j"])
 
 
 # Unit тесты для функции compare_lists_averages
+# def test_compare_lists_averages():
