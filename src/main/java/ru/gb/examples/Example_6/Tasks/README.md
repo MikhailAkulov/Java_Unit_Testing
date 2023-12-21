@@ -10,10 +10,6 @@
 - "Второй список имеет большее среднее значение", если среднее значение второго списка больше.
 - "Средние значения равны", если средние значения списков равны.
 
-
-`Реализация:`
-[NotebookAppTest](https://github.com/MikhailAkulov/Java_Unit_Testing/blob/main/src/test/main/java/ru/gb/examples/Example_5/Tasks/NotebookAppTest.java)
-
 ## Важно:
 
 - Приложение должно быть написано в соответствии с принципами объектно-ориентированного программирования.
@@ -26,10 +22,36 @@
 
 Отчет о выполнении этого задания должен включать в себя следующие элементы:
 - Код программы
+[точка входа,](https://github.com/MikhailAkulov/Java_Unit_Testing/blob/main/src/main/java/ru/gb/examples/Example_6/Tasks/main.py)
+[функционал приложения](https://github.com/MikhailAkulov/Java_Unit_Testing/blob/main/src/main/java/ru/gb/examples/Example_6/Tasks/application.py)
 - Код тестов
+[test_application](https://github.com/MikhailAkulov/Java_Unit_Testing/blob/main/src/test/main/java/ru/gb/examples/Example_6/Tasks/test_application.py)
 - Отчет pylint/Checkstyle
+
+    `pylint_main`
+![main](images/pylint_main.png)
+    `pylint_application`
+![application](images/pylint_application.png)
+    `pylint_test_application`
+![test_application](images/pylint_test.png)
+
 - Отчет о покрытии тестами
+
+    к сожалению, в `Community Edition` его не добыть, а SolarLint Report выдаёт такую картину:
+![SolarLintReport](images/SolarLintReport.png)
+
 - Объяснение того, какие сценарии покрыты тестами и почему вы выбрали именно эти сценарии.
 
-`Ответ:`
-Юнит-тест, поскольку проверяется работа отдельного метода `addContact`
+    `Ответ:`
+По большому счёту программа простейшая, класс `Application` включает в себя всего 2 функции:
+первая вычисляет среднее значение списка, а вторая - используя первую, сравнивает средние значения двух списков.
+
+    Сценарии тестов:
+    * Проверка соответствия ожидаемых результатов работы функции вычисления среднего значения при передаче правильных входных данных
+    * Проверка соответствия ожидаемого результата функции вычисления среднего значения при передаче пустого списка
+    * Проверка вызова исключение TypeError, если функции передается не список
+    * Проверка вызова исключение TypeError, если в список передаются не цифры
+    * Проверка корректной работы функции сравнения средних сначений списков, если среднее значение первого списка больше
+    * Проверка корректной работы функции сравнения средних сначений списков, если среднее значение второго списка больше
+    * Проверка корректной работы функции сравнения средних сначений списков, если средние значения списков равны
+
